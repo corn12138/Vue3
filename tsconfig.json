@@ -1,0 +1,50 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    },
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.vitest.json"
+    }
+  ],
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "types": ["@vue/runtime-dom"],
+    // 使用 Object.defineProperty 定义 class 中的属性，而非使用 obj.key = value 的形式定义属性
+    "useDefineForClassFields": true,
+    // 启用所用严格的类型检查
+    "strict": true,
+    "jsx": "preserve",
+      // 允许引入 JSON 文件
+    "resolveJsonModule": true,
+    // 该属性要求所有文件都是 ES Module 模块。
+    "isolatedModules": true,
+    "moduleResolution": "Node",
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    // 跳过对 .d.ts 文件的类型检查
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ],
+    
+  },
+  // 包含文件编译的匹配模式
+  // "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+}

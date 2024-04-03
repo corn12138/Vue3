@@ -1,0 +1,15 @@
+/* main.scss */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* 以下是你可以添加的自定义样式示例 */
+/* 自定义组件样式 */
+.btn-blue {
+  @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+}
+
+/* 自定义实用工具样式 */
+.padding-horizontal-4 {
+  @apply px-4;
+}
